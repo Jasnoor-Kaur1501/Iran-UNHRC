@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IRAN | UNHRC Study Guide — Climate Displacement</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ir-green: #239f40;
+    --ir-red: #da0000;
+    --ir-gold: #f0c040;
+    --bg: #0a0c0f;
+    --surface: #111418;
+    --surface2: #181d22;
+    --border: rgba(255,255,255,0.08);
+    --border-accent: rgba(35,159,64,0.4);
+    --text: #e8eaed;
+    --text-muted: #8a9099;
+    --text-dim: #555e68;
+    --accent: #239f40;
+    --accent2: #f0c040;
+    --danger: #da0000;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(10,12,15,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex; align-items: center; gap: 0; overflow-x: auto;
+  }
+  nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 1rem 1.1rem;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+  }
+  nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  nav .logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 14px;
+    color: var(--accent);
+    margin-right: 1.5rem;
+    white-space: nowrap;
+    border-bottom: none !important;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #0a0c0f 0%, #0d1a0f 50%, #0a0c0f 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 4rem 2rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(35,159,64,0.12) 0%, transparent 70%);
+  }
+  .flag-bar {
+    display: flex; justify-content: center; gap: 0; margin-bottom: 2rem;
+    border-radius: 4px; overflow: hidden;
+    width: 80px; margin: 0 auto 2rem;
+    box-shadow: 0 0 40px rgba(35,159,64,0.3);
+  }
+  .flag-bar div { height: 8px; flex: 1; }
+  .hero-label {
+    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600; margin-bottom: 0.5rem;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900; line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+  .hero h1 span { color: var(--accent); }
+  .hero-sub {
+    color: var(--text-muted);
+    font-size: 14px; max-width: 600px; margin: 0 auto 2rem;
+    font-style: italic;
+  }
+  .badges { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
+  .badge {
+    padding: 0.35rem 1rem;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .badge-green { background: rgba(35,159,64,0.15); border: 1px solid rgba(35,159,64,0.35); color: #5dd67a; }
+  .badge-gold { background: rgba(240,192,64,0.12); border: 1px solid rgba(240,192,64,0.3); color: #f0c040; }
+  .badge-red { background: rgba(218,0,0,0.12); border: 1px solid rgba(218,0,0,0.3); color: #ff6b6b; }
+
+  /* LAYOUT */
+  .container { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* SECTION */
+  section { padding: 3rem 0 2rem; border-bottom: 1px solid var(--border); }
+  section:last-child { border-bottom: none; }
+  .section-header { margin-bottom: 2rem; }
+  .section-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; color: var(--accent); letter-spacing: 0.1em;
+    text-transform: uppercase; margin-bottom: 0.35rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem; font-weight: 700;
+  }
+  .section-desc { color: var(--text-muted); margin-top: 0.5rem; font-size: 14px; }
+
+  /* CARDS */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .card-title {
+    font-size: 13px; font-weight: 600; letter-spacing: 0.05em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem;
+  }
+  .card-accent { border-left: 3px solid var(--accent); }
+  .card-gold { border-left: 3px solid var(--accent2); }
+  .card-red { border-left: 3px solid var(--danger); }
+
+  /* GRID */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  @media(max-width: 680px) {
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  }
+
+  /* MOTION TABS */
+  .motion-tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+  .motion-tab {
+    padding: 0.5rem 1.2rem;
+    border-radius: 100px;
+    font-size: 12px; font-weight: 600;
+    cursor: pointer; transition: all 0.2s;
+    border: 1px solid var(--border);
+    background: transparent; color: var(--text-muted);
+  }
+  .motion-tab.active {
+    background: var(--accent); border-color: var(--accent); color: #000;
+  }
+  .motion-content { display: none; }
+  .motion-content.active { display: block; }
+
+  /* SPEECH BOX */
+  .speech-box {
+    background: var(--surface2);
+    border: 1px solid var(--border-accent);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    position: relative;
+  }
+  .speech-box::before {
+    content: '"';
+    font-family: 'Playfair Display', serif;
+    font-size: 80px; line-height: 1;
+    color: var(--accent); opacity: 0.2;
+    position: absolute; top: 0.5rem; left: 1rem;
+  }
+  .speech-text { font-size: 14.5px; line-height: 1.9; }
+  .speech-meta {
+    margin-top: 1rem;
+    display: flex; gap: 1rem; align-items: center;
+    border-top: 1px solid var(--border);
+    padding-top: 0.75rem;
+  }
+  .speech-meta span { font-size: 11px; color: var(--text-dim); }
+  .speech-meta .tag { color: var(--accent2); font-weight: 600; }
+
+  /* ALLIES TABLE */
+  .ally-grid { display: grid; gap: 0.75rem; }
+  .ally-row {
+    display: grid;
+    grid-template-columns: 120px 90px 1fr;
+    gap: 1rem; align-items: start;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+  }
+  .ally-country { font-weight: 600; font-size: 13px; }
+  .ally-type {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.05em;
+    text-transform: uppercase; padding: 0.2rem 0.6rem;
+    border-radius: 100px; text-align: center;
+    white-space: nowrap;
+  }
+  .type-ally { background: rgba(35,159,64,0.15); color: #5dd67a; }
+  .type-rival { background: rgba(218,0,0,0.15); color: #ff6b6b; }
+  .type-neutral { background: rgba(240,192,64,0.12); color: #f0c040; }
+  .ally-note { font-size: 13px; color: var(--text-muted); }
+
+  /* CHIT CHAT / POI */
+  .chit-grid { display: grid; gap: 0.75rem; }
+  .chit-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+  }
+  .chit-country { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent2); font-weight: 700; margin-bottom: 0.35rem; }
+  .chit-q { font-size: 13.5px; }
+
+  /* POI box */
+  .poi-box {
+    background: var(--surface2);
+    border: 1px solid rgba(240,192,64,0.25);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  .poi-target { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent2); font-weight: 700; margin-bottom: 0.35rem; }
+  .poi-q { font-size: 13.5px; }
+
+  /* KEY FACTS */
+  .fact-row {
+    display: flex; gap: 1rem; align-items: flex-start;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+  }
+  .fact-row:last-child { border-bottom: none; }
+  .fact-key { color: var(--text-muted); min-width: 180px; font-size: 13px; }
+  .fact-val { color: var(--text); }
+
+  /* HIGHLIGHT */
+  em { color: var(--accent2); font-style: normal; font-weight: 600; }
+  strong { color: #fff; font-weight: 600; }
+
+  /* TIMELINE */
+  .timeline { position: relative; padding-left: 2rem; }
+  .timeline::before {
+    content: ''; position: absolute; left: 6px; top: 0; bottom: 0;
+    width: 1px; background: var(--border);
+  }
+  .tl-item { position: relative; margin-bottom: 1.25rem; }
+  .tl-dot {
+    position: absolute; left: -2.1rem; top: 4px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--accent); border: 2px solid var(--bg);
+  }
+  .tl-year { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--accent); font-weight: 700; margin-bottom: 0.2rem; }
+  .tl-text { font-size: 13.5px; color: var(--text-muted); }
+
+  /* STAT CARDS */
+  .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.75rem; }
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    text-align: center;
+  }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--accent); }
+  .stat-label { font-size: 12px; color: var(--text-muted); margin-top: 0.25rem; }
+
+  ul.styled { list-style: none; padding: 0; }
+  ul.styled li {
+    padding: 0.4rem 0 0.4rem 1.2rem;
+    position: relative;
+    font-size: 14px;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+  }
+  ul.styled li:last-child { border-bottom: none; }
+  ul.styled li::before { content: '›'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+  ul.styled li strong { color: var(--text); }
+
+  .warn-box {
+    background: rgba(240,192,64,0.07);
+    border: 1px solid rgba(240,192,64,0.25);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    font-size: 13.5px;
+    margin-bottom: 1rem;
+  }
+  .warn-box .warn-head { color: var(--accent2); font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.4rem; }
+  .tip-box {
+    background: rgba(35,159,64,0.07);
+    border: 1px solid rgba(35,159,64,0.25);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    font-size: 13.5px;
+    margin-bottom: 1rem;
+  }
+  .tip-box .tip-head { color: var(--accent); font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.4rem; }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 12px;
+    color: var(--text-dim);
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 600px) {
+    .ally-row { grid-template-columns: 1fr; gap: 0.35rem; }
+    nav a { padding: 0.75rem 0.7rem; font-size: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#">🇮🇷 IRAN</a>
+  <a href="#overview">Overview</a>
+  <a href="#iran-stance">Iran's Stance</a>
+  <a href="#motions">Motions + Speeches</a>
+  <a href="#allies">Allies & Rivals</a>
+  <a href="#chitchat">Chit-Chat Q&A</a>
+  <a href="#poi">POIs</a>
+  <a href="#global">Global Context</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="flag-bar">
+    <div style="background:#239f40;"></div>
+    <div style="background:#fff;"></div>
+    <div style="background:#da0000;"></div>
+  </div>
+  <div class="hero-label">MUN Study Guide · UNHRC</div>
+  <h1>Protecting Human Rights of<br><span>Climate-Displaced Populations</span></h1>
+  <p class="hero-sub">Portfolio: Islamic Republic of Iran · Delegate: Jasnoor Kaur</p>
+  <div class="badges">
+    <span class="badge badge-green">UNHRC Committee</span>
+    <span class="badge badge-gold">4 Motions</span>
+    <span class="badge badge-red">Developing Nation Bloc</span>
+  </div>
+</div>
+
+<!-- SECTION 1: AGENDA OVERVIEW -->
+<section id="overview">
+<div class="container">
+  <div class="section-header">
+    <div class="section-num">01 — Agenda Overview</div>
+    <div class="section-title">What This Agenda Is Actually About</div>
+    <div class="section-desc">Read this first — your foundation for everything else in committee.</div>
+  </div>
+
+  <div class="card card-accent">
+    <div class="card-title">The Core Problem</div>
+    <p>Climate change is displacing millions of people — floods, droughts, rising seas, desertification — yet international law does not formally recognize "climate refugees." The 1951 Refugee Convention only covers people fleeing persecution. Climate-displaced persons fall into a legal grey zone: no formal protection, no rights, no status. The UNHRC is tasked with fixing this gap.</p>
+  </div>
+
+  <div class="stat-grid" style="margin: 1.5rem 0;">
+    <div class="stat-card">
+      <div class="stat-num">216M</div>
+      <div class="stat-label">Internal climate migrants by 2050 (World Bank)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">21.5M</div>
+      <div class="stat-label">Displaced annually by weather disasters</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">0</div>
+      <div class="stat-label">Binding international treaties protecting climate refugees</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">1.5°C</div>
+      <div class="stat-label">Paris Agreement target; already breached in 2024</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Key Legal Gaps</div>
+      <ul class="styled">
+        <li><strong>1951 Refugee Convention</strong> — excludes climate victims entirely</li>
+        <li><strong>Paris Agreement</strong> — mentions displacement but has no enforcement</li>
+        <li><strong>Sendai Framework</strong> — disaster risk only, not legal refugee status</li>
+        <li><strong>Guiding Principles on IDPs</strong> — not legally binding</li>
+        <li><strong>Statelessness</strong> — sinking island nations (Maldives, Tuvalu) will create stateless people with no legal protection</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">Key Stakeholders Globally</div>
+      <ul class="styled">
+        <li><strong>UNHCR</strong> — mandate does not cover climate refugees</li>
+        <li><strong>IPCC</strong> — provides climate science underpinning displacement claims</li>
+        <li><strong>IOM</strong> — tracks migration data but lacks enforcement</li>
+        <li><strong>Pacific Island Forum</strong> — front-line nations demanding legal recognition</li>
+        <li><strong>Loss & Damage Fund (COP28, 2023)</strong> — new but underfunded</li>
+        <li><strong>Global Compact for Migration (2018)</strong> — voluntary, non-binding</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="warn-box">
+    <div class="warn-head">⚠ Key Distinction to Know</div>
+    <strong>IDP (Internally Displaced Person)</strong> — displaced within their own country. <strong>Refugee</strong> — crosses an international border. Most climate displacement is currently internal, which means UNHCR has even less jurisdiction. Iran should push for definitions that cover BOTH categories.
+  </div>
+</div>
+</section>
+
+<!-- SECTION 2: IRAN'S STANCE -->
+<section id="iran-stance">
+<div class="container">
+  <div class="section-header">
+    <div class="section-num">02 — Iran's Position</div>
+    <div class="section-title">Iran: Country Profile & Official Stance</div>
+    <div class="section-desc">Know your country inside-out. This is what you speak from.</div>
+  </div>
+
+  <div class="card card-gold" style="margin-bottom:1.5rem;">
+    <div class="card-title">Iran's Core Argument in One Paragraph</div>
+    <p>Iran is itself a victim of climate change and environmental degradation — facing severe desertification, water scarcity, and internal displacement — while being disproportionately harmed by Western sanctions that cripple its capacity to adapt. Iran argues that the international community must establish legally binding accountability frameworks that hold historically high-emission states (US, EU, UK) responsible for climate damage, provide financial and technical support to vulnerable nations, and formally recognize climate-displaced persons in international law — without allowing powerful states to weaponize climate conditionality against developing nations.</p>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Iran's Climate Situation — Domestic Facts</div>
+      <ul class="styled">
+        <li><strong>Desertification:</strong> Over 90 million hectares — 55% of Iran's total land area — are affected by desertification</li>
+        <li><strong>Lake Urmia:</strong> Once the 6th largest saltwater lake on Earth; has shrunk by ~90% since the 1970s — directly displacing communities</li>
+        <li><strong>Dust storms:</strong> Khuzestan, Sistan-Baluchestan and western provinces hit by severe sandstorms annually, forcing seasonal displacement</li>
+        <li><strong>Water crisis:</strong> Iran is one of the world's most water-stressed nations; 97 of 609 plains have reached critical groundwater depletion</li>
+        <li><strong>Internal climate migrants:</strong> Estimated hundreds of thousands displaced from rural areas to cities due to drought and land degradation</li>
+        <li><strong>Heat extremes:</strong> Persian Gulf temperatures recorded "wet-bulb" events in 2015 that were physiologically unsurvivable outdoors</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">Iran's Political & Diplomatic Positioning</div>
+      <ul class="styled">
+        <li><strong>G77 + China bloc:</strong> Iran consistently votes with the Global South on climate finance and historical responsibility</li>
+        <li><strong>Anti-Western conditionality:</strong> Iran firmly opposes making climate aid conditional on political compliance — this is seen as imperialism</li>
+        <li><strong>Sanctions impact:</strong> US sanctions prevent Iran from accessing green technology, IMF climate funds, and clean energy imports — Iran calls this an environmental human rights violation</li>
+        <li><strong>MENA solidarity:</strong> Strong alignment with Algeria, Egypt, Sudan, Morocco on desertification and water rights as human rights</li>
+        <li><strong>Palestine framing:</strong> Iran often links environmental dispossession to political dispossession — Gaza's environmental collapse is cited as deliberate ecocide</li>
+        <li><strong>Non-interference principle:</strong> Iran opposes international monitoring frameworks that could be used to surveil or intervene in sovereign states</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-header" style="margin-top:2rem;">
+    <div class="section-title" style="font-size:1.2rem;">Iran's Historical Engagement with This Topic</div>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1992</div>
+      <div class="tl-text">Iran signs the UNFCCC but argues that as a developing petro-state, it deserves differentiated responsibilities</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2003–2010</div>
+      <div class="tl-text">Lake Urmia collapses dramatically; Iran begins domestic framing of water scarcity as a national security and human rights issue</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2015</div>
+      <div class="tl-text">Iran signs Paris Agreement; submits NDC pledging 4% emissions reduction unconditionally and 12% if sanctions are lifted — explicitly linking sanctions to climate capacity</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2019–2021</div>
+      <div class="tl-text">Iran experiences massive flooding (2019, 80 provinces affected, 10M displaced) and drought cycles simultaneously — raises at UN that this is climate injustice</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2021–2023</div>
+      <div class="tl-text">Iran advocates at COP26/27/28 for Loss & Damage fund accessible to sanctioned states; argues climate finance conditionality is discriminatory</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2024</div>
+      <div class="tl-text">UNHRC session: Iran co-sponsors resolutions on right to clean water as a fundamental human right; pushes for climate displacement to be included in existing human rights treaty bodies</div>
+    </div>
+  </div>
+
+  <div class="tip-box" style="margin-top:1.5rem;">
+    <div class="tip-head">💡 Iran's Signature Talking Points to Memorize</div>
+    <ul class="styled">
+      <li><strong>"Common but Differentiated Responsibilities"</strong> — developing nations must not bear the burden of pollution they didn't cause</li>
+      <li><strong>"Climate sanctions double injustice"</strong> — Western sanctions prevent Iran from both adapting to climate change AND accessing international climate funds</li>
+      <li><strong>"Desertification is a human rights crisis"</strong> — not just an environmental one</li>
+      <li><strong>"Sovereignty of legal frameworks"</strong> — Iran will not accept monitoring mechanisms that undermine state sovereignty</li>
+      <li><strong>"Lake Urmia is proof"</strong> — cite it whenever possible as a concrete domestic example</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<!-- SECTION 3: MOTIONS & SPEECHES -->
+<section id="motions">
+<div class="container">
+  <div class="section-header">
+    <div class="section-num">03 — Motions & 90-Second Speeches</div>
+    <div class="section-title">All 4 Motions: Breakdown + Speeches</div>
+    <div class="section-desc">Click each motion tab to see Iran's position and your speech.</div>
+  </div>
+
+  <div class="motion-tabs">
+    <button class="motion-tab active" onclick="showMotion(1)">Motion 1</button>
+    <button class="motion-tab" onclick="showMotion(2)">Motion 2</button>
+    <button class="motion-tab" onclick="showMotion(3)">Motion 3</button>
+    <button class="motion-tab" onclick="showMotion(4)">Motion 4</button>
+  </div>
+
+  <!-- MOTION 1 -->
+  <div class="motion-content active" id="m1">
+    <div class="card card-accent">
+      <div class="card-title">Motion 1 — International Accountability Framework</div>
+      <p><strong>What it proposes:</strong> Establish a binding international framework that holds states and actors accountable for protecting human rights of climate-displaced people.</p><br>
+      <p><strong>Iran's position:</strong> <em>STRONGLY SUPPORTS</em> — but with conditions. Iran wants accountability directed at historically high-emission Global North states. Iran will push to ensure the framework does not allow powerful states to use "accountability" as a pretext to interfere in developing nations' internal affairs. Iran wants the framework to include provisions against sanctions as climate barriers.</p>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Iran Should Push For</div>
+        <ul class="styled">
+          <li>Framework based on <strong>historical emissions responsibility</strong> — polluter pays principle</li>
+          <li>A <strong>Climate Justice Tribunal</strong> or special rapporteur with developing-nation representation</li>
+          <li>Explicit prohibition on <strong>unilateral sanctions</strong> that impair climate adaptation capacity</li>
+          <li>Technology transfer obligations from Global North to South</li>
+          <li>Accountability for non-state actors (fossil fuel corporations)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title">Iran Should Oppose</div>
+        <ul class="styled">
+          <li>Frameworks that allow <strong>interventionist monitoring</strong> of developing states</li>
+          <li>Conditionality — tying aid/protection to political behavior</li>
+          <li>Any language that shifts responsibility to developing nations</li>
+          <li>USA/EU-led frameworks without adequate developing-nation voting power</li>
+        </ul>
+      </div>
+    </div>
+    <div class="speech-box" style="margin-top:1rem;">
+      <div class="card-title" style="margin-bottom:1rem;">90-Second Speech — Motion 1</div>
+      <div class="speech-text">
+        <p>Honorable Chair, distinguished delegates —</p><br>
+        <p>The Islamic Republic of Iran rises in strong support of establishing an international accountability framework — for the simple reason that accountability without consequence is merely a suggestion.</p><br>
+        <p>Climate displacement is not an act of nature. It is the direct consequence of over a century of unchecked industrialization by a handful of wealthy nations. Iran, a country that has contributed less than one percent of cumulative global emissions, now watches as Lake Urmia — once the sixth-largest saltwater lake on Earth — has shrunk by ninety percent. As our western provinces are buried under dust storms. As hundreds of thousands of our own citizens are internally displaced by drought and desertification.</p><br>
+        <p>We support this framework — but we demand it be built on the principle of <em>Common but Differentiated Responsibilities</em>. Accountability must flow from where responsibility lies — from those who built their prosperity on carbon. Furthermore, this Council must recognize that unilateral economic sanctions imposed on developing nations are themselves a human rights violation — they strip states of the very tools needed to protect their climate-vulnerable populations.</p><br>
+        <p>Iran calls for a framework that names the polluters, compels the wealthy, and protects the displaced — not one that burdens the already burdened. Thank you.</p>
+      </div>
+      <div class="speech-meta">
+        <span class="tag">~90 seconds</span>
+        <span>Tone: Assertive, accusatory toward Global North, data-grounded</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOTION 2 -->
+  <div class="motion-content" id="m2">
+    <div class="card card-accent">
+      <div class="card-title">Motion 2 — Rising Sea Levels, Women & Children</div>
+      <p><strong>What it proposes:</strong> Address displacement from rising sea levels with special protection for women and children refugees.</p><br>
+      <p><strong>Iran's position:</strong> <em>SUPPORTS</em> with framing qualifications. Iran does not face immediate sea-level displacement (it is largely landlocked in vulnerable zones) but strongly supports protection of vulnerable groups. Iran will link this to its advocacy for Palestinian women and children displaced by conflict/environmental destruction, and align with MENA and Pacific island nations. Iran is cautious about Western states using "women's rights" framing to lecture Islamic nations.</p>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Iran Should Push For</div>
+        <ul class="styled">
+          <li>Gender-specific protections in any climate displacement legal instrument</li>
+          <li>Funding for women-led community relocation and adaptation programs</li>
+          <li>Recognition that <strong>women bear disproportionate burdens</strong> in climate disasters (water collection, food, childcare)</li>
+          <li>Protections for stateless women from sinking island nations</li>
+          <li>Linking sea-level displacement to the <em>Loss & Damage Fund</em> (COP28)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title">Strategic Notes</div>
+        <ul class="styled">
+          <li>Iran should <strong>not</strong> allow Western nations to use "women's rights" framing to criticize Islamic states' domestic policies</li>
+          <li>Counter with: "Iran has always protected its women and children; we reject selective outrage from states that arm conflicts displacing millions of women"</li>
+          <li>Build alliance with <strong>Bangladesh, Maldives, Indonesia, Vietnam</strong> — directly sea-level threatened</li>
+          <li>Maldives (Dhairya barot) is a natural ally here — support their leadership on this motion</li>
+        </ul>
+      </div>
+    </div>
+    <div class="speech-box" style="margin-top:1rem;">
+      <div class="card-title" style="margin-bottom:1rem;">90-Second Speech — Motion 2</div>
+      <div class="speech-text">
+        <p>Honorable Chair —</p><br>
+        <p>When the sea rises, it is not the powerful who drown first. It is women carrying children on their backs through floodwaters. It is girls pulled from school because their family has fled. It is mothers who watch their children starve when crops fail and wells run dry.</p><br>
+        <p>The Islamic Republic of Iran stands in full solidarity with the nations of the Pacific, the Bay of Bengal, and the low-lying coasts of our world who face annihilation not from war, but from the consequences of another's greed. The Maldives may one day cease to exist as a nation. Bangladesh loses land every monsoon season. And through it all, it is women and children who bear the greatest burden.</p><br>
+        <p>Iran calls on this Council to mandate gender-responsive protections in every climate displacement framework — not as an afterthought, but as the core of our legal architecture. We further call on the Loss and Damage Fund established at COP28 to be immediately scaled and made accessible to all nations, including those facing unilateral economic pressure from outside powers.</p><br>
+        <p>Protecting women and children from climate displacement is not a political statement. It is the most basic expression of human dignity. Iran will support any resolution that enshrines this without double standards. Thank you.</p>
+      </div>
+      <div class="speech-meta">
+        <span class="tag">~90 seconds</span>
+        <span>Tone: Humanitarian, emotional, ends with a principled rebuke of conditionality</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOTION 3 -->
+  <div class="motion-content" id="m3">
+    <div class="card card-accent">
+      <div class="card-title">Motion 3 — Desertification in MENA and Africa</div>
+      <p><strong>What it proposes:</strong> Address desertification in the Middle East, North Africa, and African Union as a direct driver of displacement and human rights violations.</p><br>
+      <p><strong>Iran's position:</strong> <em>EXTREMELY HIGH PRIORITY — this is Iran's home turf.</em> Iran is one of the most severely desertification-affected nations in the world. This motion is where Iran speaks from direct, lived national experience and should lead the bloc.</p>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Iran's Domestic Evidence (Use These!)</div>
+        <ul class="styled">
+          <li><strong>Lake Urmia:</strong> 90% shrinkage; 6M people in the region affected by salt dust storms causing respiratory disease and displacement</li>
+          <li><strong>Sistan-Baluchestan:</strong> One of Iran's most arid regions — severe poverty and displacement linked directly to desertification and Hamoun Lake drying up</li>
+          <li><strong>Wind of 120 Days:</strong> Seasonal sandstorms in Sistan last 4 months; entire villages are seasonally uninhabitable</li>
+          <li><strong>Dust storm sources:</strong> Iran identifies both domestic land mismanagement AND cross-border dust sources (Iraq, Syria) — demonstrating this is a transboundary issue requiring international cooperation</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title">Iran Should Push For</div>
+        <ul class="styled">
+          <li>A <strong>Regional Desertification Emergency Protocol</strong> for MENA and Sub-Saharan Africa</li>
+          <li>International funding for <strong>green belt / afforestation</strong> programs (like the African Great Green Wall)</li>
+          <li>Recognition of <strong>cross-border dust storms</strong> as a human rights and displacement issue requiring multilateral response</li>
+          <li>Explicit language that economic sanctions against affected nations violate their right to address desertification</li>
+          <li>Water-sharing agreements as instruments of human rights protection</li>
+        </ul>
+      </div>
+    </div>
+    <div class="speech-box" style="margin-top:1rem;">
+      <div class="card-title" style="margin-bottom:1rem;">90-Second Speech — Motion 3</div>
+      <div class="speech-text">
+        <p>Honorable Chair, distinguished delegates —</p><br>
+        <p>I speak today not from theory, but from the lived reality of my nation. Lake Urmia — once a jewel of the Middle East, the sixth-largest saltwater lake in the world — is now a salt flat. Six million Iranians who depended on that ecosystem breathe salt dust. Their farmlands are gone. Their livelihoods are gone. They are displaced — not by war, not by persecution — but by desertification. And yet they have no legal status. No protection. No recognition.</p><br>
+        <p>This is the reality across the Middle East, North Africa, and the African continent. The Sahara expands southward. The Arabian Peninsula becomes less inhabitable. The Sistan Basin loses its water to the vanishing Hamoun Lake. Entire communities are forced to move — and the world calls it migration, not displacement. It calls them migrants, not refugees.</p><br>
+        <p>The Islamic Republic of Iran calls on this Council to establish a regional emergency protocol specifically addressing desertification-driven displacement. We call for an expanded Great Green Wall initiative with binding funding commitments. And we demand that the international community recognize that desertification in the MENA region is not a regional problem — it is a global failure of accountability.</p><br>
+        <p>The desert is advancing. Our people cannot wait. Thank you.</p>
+      </div>
+      <div class="speech-meta">
+        <span class="tag">~90 seconds</span>
+        <span>Tone: Passionate, first-person national experience, urgent, coalition-building</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOTION 4 -->
+  <div class="motion-content" id="m4">
+    <div class="card card-accent">
+      <div class="card-title">Motion 4 — Strengthening Legal Frameworks for Climate-Displaced Persons</div>
+      <p><strong>What it proposes:</strong> Review and strengthen existing international law to better define and protect "climate-displaced persons," including the undocumented and stateless.</p><br>
+      <p><strong>Iran's position:</strong> <em>SUPPORTS strongly</em> — but is <em>cautious</em> about how definitions and monitoring mechanisms are structured. Iran wants legal frameworks that protect displaced people AND preserve state sovereignty. Iran will advocate for an expanded definition that includes internally displaced persons and stateless individuals, while opposing any framework that places conditions on receiving states' behavior.</p>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Iran Should Push For</div>
+        <ul class="styled">
+          <li>A <strong>new Protocol to the 1951 Refugee Convention</strong> covering climate displacement</li>
+          <li>Recognition of <strong>stateless climate-displaced persons</strong> as a distinct category deserving automatic protection</li>
+          <li>Closing the loophole for <strong>undocumented</strong> climate-displaced persons — documentation should not be a prerequisite for human rights</li>
+          <li>Non-refoulement obligations extended to climate displacement</li>
+          <li>Binding financial commitments from high-emission states to receiving countries</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title">Iran Should Oppose / Be Cautious Of</div>
+        <ul class="styled">
+          <li>Any mechanism allowing international bodies to <strong>override sovereign decisions</strong> on displacement</li>
+          <li>Western states using expanded refugee definitions to extract political concessions from developing nations hosting displaced persons</li>
+          <li>Definitions that could be retroactively used against Iran regarding its own treatment of Afghan refugees (Iran hosts 3–4M Afghan refugees — largest in region)</li>
+          <li>"Statelessness" frameworks that don't account for the Palestinian stateless situation</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tip-box">
+      <div class="tip-head">💡 Iran's Ace Card — Afghan Refugees</div>
+      Iran hosts between 3–4 million Afghan refugees — one of the largest refugee-hosting nations in the world, with limited international support and under heavy sanctions. Use this to demonstrate that Iran already bears a massive refugee burden and deserves financial and legal support, not lectures, from the Global North.
+    </div>
+    <div class="speech-box" style="margin-top:1rem;">
+      <div class="card-title" style="margin-bottom:1rem;">90-Second Speech — Motion 4</div>
+      <div class="speech-text">
+        <p>Honorable Chair —</p><br>
+        <p>The Islamic Republic of Iran currently hosts between three and four million Afghan refugees — one of the largest refugee-hosting populations on Earth. We do this with limited resources, under the crushing weight of unilateral sanctions, and with minimal international assistance. We do not lecture the world about burden-sharing. We demonstrate it.</p><br>
+        <p>And yet the very people we shelter — including those displaced by Afghanistan's climate collapse, its droughts, its floods — have no formal legal status under international law as climate refugees. They exist in legal limbo. The 1951 Refugee Convention was written for a different world. That world no longer exists.</p><br>
+        <p>Iran calls for a substantive reform of international legal frameworks: a new protocol that explicitly defines and protects climate-displaced persons; that guarantees rights to the stateless and undocumented; and that closes every loophole that allows the wealthy world to ignore those who arrive at their borders having lost everything to a crisis they did not create.</p><br>
+        <p>But let us be clear: any new legal framework must be built on the principle of sovereign equality. It must not become a tool for powerful states to impose conditionality or intervene in the domestic affairs of receiving nations. Legal protection, yes. Political leverage, never. Thank you.</p>
+      </div>
+      <div class="speech-meta">
+        <span class="tag">~90 seconds</span>
+        <span>Tone: Authority from experience (Afghan refugees), reform-focused, sovereignty-protective</span>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- SECTION 4: ALLIES & RIVALS -->
+<section id="allies">
+<div class="container">
+  <div class="section-header">
+    <div class="section-num">04 — Diplomatic Matrix</div>
+    <div class="section-title">Allies, Rivals & Neutrals</div>
+    <div class="section-desc">Know who to build coalitions with and who to watch carefully.</div>
+  </div>
+
+  <div class="ally-grid">
+    <div class="ally-row">
+      <div class="ally-country">🇨🇳 China</div>
+      <div><span class="ally-type type-ally">Strong Ally</span></div>
+      <div class="ally-note">Vandit Joshi. Both oppose Western-led accountability frameworks that bypass developing nations. China and Iran consistently co-vote on sovereignty, non-interference, and differentiated responsibilities. Build coalition here — China gives your bloc geopolitical weight.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇷🇺 Russia</div>
+      <div><span class="ally-type type-ally">Strong Ally</span></div>
+      <div class="ally-note">Sneh Khatri. Like China, Russia opposes Western-dominated frameworks. Shared interest in ensuring accountability mechanisms don't target developing/sanctioned states. Russia is also skeptical of interventionist legal instruments.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇩🇿 Algeria</div>
+      <div><span class="ally-type type-ally">Strong Ally</span></div>
+      <div class="ally-note">HRIDHAAN. MENA bloc partner — both heavily affected by desertification. Algeria and Iran share the African Union's advocacy for climate finance reparations and against conditionality. Natural leader partnership on Motion 3.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇵🇰 Pakistan</div>
+      <div><span class="ally-type type-ally">Strong Ally</span></div>
+      <div class="ally-note">Samruddhi Barve. Severely climate-vulnerable, lost 33% of land to 2022 floods. Devastated by displacement while receiving minimal climate finance. Pakistan and Iran share historical ties and G77 voting patterns. Strong ally on all motions.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇧🇩 Bangladesh</div>
+      <div><span class="ally-type type-ally">Strong Ally</span></div>
+      <div class="ally-note">Suhani Malhotra. Among the world's most climate-vulnerable — sea-level rise, cyclones, floods. Will strongly support Motion 2 and 4. Natural partner for women & children protections. Use Bangladesh's data in your speeches.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇸🇩 Sudan</div>
+      <div><span class="ally-type type-ally">Ally</span></div>
+      <div class="ally-note">Unrepresented (no delegate listed). Sudan faces both conflict and climate displacement — Darfur's crisis is partly driven by desertification. Iran can speak on Sudan's behalf on Motion 3.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇲🇦 Morocco</div>
+      <div><span class="ally-type type-ally">Ally</span></div>
+      <div class="ally-note">Prachi Das. MENA partner on desertification. Morocco has been proactive on climate (hosted COP22) and is affected by Saharan expansion. However, Morocco has diplomatic ties with the West — approach carefully.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇲🇻 Maldives</div>
+      <div><span class="ally-type type-ally">Ally</span></div>
+      <div class="ally-note">Dhairya Barot. Existential sea-level threat. Strong voice for Motion 2. Iran should express full solidarity. Maldives is a Muslim-majority country, strengthening people-to-people solidarity argument.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇿🇦 South Africa</div>
+      <div><span class="ally-type type-ally">Ally</span></div>
+      <div class="ally-note">ShauryaSinh B Jadeja. African Union voice; supports climate reparations and historical responsibility framework. Shares G77 positions. Build Africa-MENA coalition.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇧🇴 Bolivia</div>
+      <div><span class="ally-type type-ally">Ally</span></div>
+      <div class="ally-note">Khushi Pandya. Bolivia has been extremely vocal about "rights of Mother Earth" and climate justice — progressive Global South ally. Supports accountability framework for high-emission states.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇰🇪 Kenya</div>
+      <div><span class="ally-type type-ally">Ally</span></div>
+      <div class="ally-note">Ujaan Ghosh. African Union, facing drought and displacement. Partner on Motion 3 (desertification). Kenya has called for loss and damage finance — aligned with Iran's position.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇨🇺 Cuba</div>
+      <div><span class="ally-type type-ally">Ally</span></div>
+      <div class="ally-note">Kriya Shah. Cuba is also under US sanctions and consistently votes against US-led frameworks. Shares anti-imperialist positioning on climate justice. Strong bloc partner for sovereignty arguments.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇺🇸 USA</div>
+      <div><span class="ally-type type-rival">Rival</span></div>
+      <div class="ally-note">Aadit Nayak. Primary adversary. US has historically undermined binding climate frameworks, opposes Loss & Damage fund, and is the sanctioning power harming Iran's climate capacity. Expect opposition on every Iran-led clause.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇬🇧 UK</div>
+      <div><span class="ally-type type-rival">Rival</span></div>
+      <div class="ally-note">Heer Gautam. Part of the Western bloc that will push for accountability mechanisms that could be used interventionistically. Watch for clauses that embed conditionality.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇫🇷 France</div>
+      <div><span class="ally-type type-rival">Rival</span></div>
+      <div class="ally-note">Nevaan Jain. European bloc leader. Will push for strong monitoring mechanisms. France has been vocal on climate but also uses human rights as geopolitical leverage. Oppose sovereignty-undermining clauses.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇩🇪 Germany</div>
+      <div><span class="ally-type type-rival">Rival</span></div>
+      <div class="ally-note">Dhaneesha Arora. EU member, will advocate for strong accountability. Germany is a high emitter historically; Iran can use this in debates. Be firm on who owes whom.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇦🇺 Australia</div>
+      <div><span class="ally-type type-rival">Rival</span></div>
+      <div class="ally-note">Manav Philip. AUKUS partner, Five Eyes, strong Western bloc. Australia has actually been obstructionist on climate finance at multiple COPs. Iran should call this out.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇳🇴 Norway</div>
+      <div><span class="ally-type type-neutral">Watch</span></div>
+      <div class="ally-note">Dhruvi Shah. Norway is a petro-state that funds climate initiatives abroad while expanding oil domestically. Iran can expose this hypocrisy. Norway may push strong accountability frameworks — some aspects aligned with Iran, some not.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇯🇵 Japan</div>
+      <div><span class="ally-type type-neutral">Neutral</span></div>
+      <div class="ally-note">Akshata Bharti. Japan supports climate action but is firmly in the Western diplomatic orbit. Can be peeled away on specific technical issues like disaster risk frameworks. Approach diplomatically.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇮🇳 India</div>
+      <div><span class="ally-type type-neutral">Neutral-Ally</span></div>
+      <div class="ally-note">Prakhar Sharma. India is a key G77 voice and shares historical responsibility arguments. However, India-Iran relations are complex (sanctions compliance). India will likely be a coalition partner on most motions. Do not alienate.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇧🇷 Brazil</div>
+      <div><span class="ally-type type-neutral">Neutral-Ally</span></div>
+      <div class="ally-note">Jeanna Agarwal. Brazil is progressive on climate (Amazon protection, Lula's return) but is part of BRICS. Generally aligned on climate finance demands. Partner for Loss & Damage rhetoric.</div>
+    </div>
+    <div class="ally-row">
+      <div class="ally-country">🇨🇦 Canada</div>
+      <div><span class="ally-type type-rival">Rival</span></div>
+      <div class="ally-note">Swathi Yadav. Closely aligned with US on foreign policy. Canada has followed US sanctions on Iran. However, Canada talks big on climate — use this gap between rhetoric and action against them.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- SECTION 5: CHIT CHAT -->
+<section id="chitchat">
+<div class="container">
+  <div class="section-header">
+    <div class="section-num">05 — Chit-Chat Q&A</div>
+    <div class="section-title">Questions to Ask Delegates in Informal Lobbying</div>
+    <div class="section-desc">Use these during unmoderated caucuses and hallway lobbying to probe, build alliances, or corner rivals.</div>
+  </div>
+
+  <div class="tip-box">
+    <div class="tip-head">💡 How to Use This Section</div>
+    In unmoderated caucus (chit-chat), your goal is threefold: (1) Build a coalition by finding common ground; (2) Probe rivals for weaknesses; (3) Gather intel on what blocs are forming. These questions serve all three purposes.
+  </div>
+
+  <div style="font-size:13px; color:var(--text-muted); margin-bottom:1rem; text-transform: uppercase; letter-spacing: 0.07em; font-weight:600;">POTENTIAL ALLIES — Coalition-Building Questions</div>
+  <div class="chit-grid">
+    <div class="chit-item">
+      <div class="chit-country">🇩🇿 Algeria (HRIDHAAN)</div>
+      <div class="chit-q">"Algeria and Iran are both watching our agricultural lands turn to desert. Should we co-sponsor a motion specifically naming the right to a non-desertified homeland as a human right? I believe we could bring the entire MENA bloc with us."</div>
+    </div>
+    <div class="chit-item">
+      <div class="chit-country">🇲🇻 Maldives (Dhairya Barot)</div>
+      <div class="chit-q">"Your nation may cease to exist within decades due to sea-level rise — a crisis caused by the world's largest emitters. Does the Maldives support making the Loss and Damage Fund legally binding, and would you co-draft language requiring its accessibility to all nations regardless of geopolitical status?"</div>
+    </div>
+    <div class="chit-item">
+      <div class="chit-country">🇵🇰 Pakistan (Samruddhi Barve)</div>
+      <div class="chit-q">"Pakistan lost a third of its land in the 2022 floods, received less than $10 billion in international aid, yet is expected to host millions of climate migrants. Do you support language that explicitly obligates the top 10 historical emitters to fund receiving-country infrastructure?"</div>
+    </div>
+    <div class="chit-item">
+      <div class="chit-country">🇧🇩 Bangladesh (Suhani Malhotra)</div>
+      <div class="chit-q">"Bangladesh is the world's most vulnerable large nation to sea-level rise and cyclones. Would Bangladesh support a clause defining climate displacement as a distinct legal category triggering automatic non-refoulement obligations on all member states?"</div>
+    </div>
+    <div class="chit-item">
+      <div class="chit-country">🇨🇳 China (Vandit Joshi)</div>
+      <div class="chit-q">"China and Iran both understand the danger of international frameworks that can be weaponized through conditionality. Would China support including explicit anti-conditionality language in the preamble — ensuring that climate finance and protection cannot be politicized?"</div>
+    </div>
+    <div class="chit-item">
+      <div class="chit-country">🇷🇺 Russia (Sneh Khatri)</div>
+      <div class="chit-q">"Russia has been consistent on the principle that international accountability mechanisms must not be used as instruments of interference in sovereign states. Would Russia support framing this accountability framework around the UN Charter's non-intervention principle?"</div>
+    </div>
+    <div class="chit-item">
+      <div class="chit-country">🇮🇳 India (Prakhar Sharma)</div>
+      <div class="chit-q">"India and Iran both know what it means to be asked to bear the consequences of a crisis we didn't cause. Would India support a resolution clause that explicitly quantifies the per-capita historical emissions of top emitters and uses this as the basis for financial obligation?"</div>
+    </div>
+    <div class="chit-item">
+      <div class="chit-country">🇰🇪 Kenya (Ujaan Ghosh)</div>
+      <div class="chit-q">"The African Great Green Wall is one of the most ambitious anti-desertification projects in history, yet it remains chronically underfunded. Would Kenya co-sponsor language mandating that 15% of the Loss and Damage Fund be allocated specifically to desertification reversal in the MENA and African Union regions?"</div>
+    </div>
+    <div class="chit-item">
+      <div class="chit-country">🇿🇦 South Africa (ShauryaSinh Jadeja)</div>
+      <div class="chit-q">"South Africa has called for climate reparations at the AU level. Iran supports this fully. Should we build language in this resolution that references the principle of ecological debt — the debt the industrialized world owes developing nations for using the atmosphere as a dump?"</div>
+    </div>
+    <div class="chit-item">
+      <div class="chit-country">🇨🇺 Cuba (Kriya Shah)</div>
+      <div class="chit-q">"Cuba knows, as Iran knows, what it means to face unilateral coercive measures while trying to protect your own people. Would Cuba support language that classifies unilateral sanctions preventing climate adaptation as a human rights violation under this framework?"</div>
+    </div>
+  </div>
+
+  <div style="font-size:13px; color:var(--text-muted); margin: 1.5rem 0 0.75rem; text-transform: uppercase; letter-spacing: 0.07em; font-weight:600;">RIVALS — Questions to Corner / Expose Hypocrisy</div>
+  <div class="chit-grid">
+    <div class="chit-item">
+      <div class="chit-country">🇺🇸 USA (Aadit Nayak)</div>
+      <div class="chit-q">"The United States is the world's largest cumulative historical emitter. It withdrew from the Paris Agreement under one administration, rejoined under another, and continues to impose sanctions that prevent developing nations from accessing green technology. How does the US reconcile this with calling for an accountability framework that applies to others?"</div>
+    </div>
+    <div class="chit-item">
+      <div class="chit-country">🇬🇧 UK (Heer Gautam)</div>
+      <div class="chit-q">"The United Kingdom industrialized on coal for over 150 years and built an empire partly through resource extraction from now climate-vulnerable nations. Does the UK acknowledge any historical financial responsibility to those former colonies now facing climate displacement?"</div>
+    </div>
+    <div class="chit-item">
+      <div class="chit-country">🇳🇴 Norway (Dhruvi Shah)</div>
+      <div class="chit-q">"Norway is the world's largest per-capita contributor to sovereign wealth through oil revenue, has one of the world's highest per-capita carbon footprints historically, and continues to grant new Arctic oil licenses. Does Norway support capping its own oil production as part of climate accountability?"</div>
+    </div>
+    <div class="chit-item">
+      <div class="chit-country">🇦🇺 Australia (Manav Philip)</div>
+      <div class="chit-q">"Australia is one of the world's top coal and LNG exporters, supplying fossil fuels that directly contribute to the sea-level rise threatening Pacific island nations — some of whom are Australia's neighbors. Does Australia support a binding commitment to phase out coal exports within this decade?"</div>
+    </div>
+    <div class="chit-item">
+      <div class="chit-country">🇫🇷 France (Nevaan Jain)</div>
+      <div class="chit-q">"France continues to finance fossil fuel projects in Africa through its development banks while also calling for accountability frameworks. Can France explain how this is consistent, and would France support including fossil fuel financing by wealthy nations as a category of human rights violation under this agenda?"</div>
+    </div>
+    <div class="chit-item">
+      <div class="chit-country">🇨🇦 Canada (Swathi Yadav)</div>
+      <div class="chit-q">"Canada has among the highest per-capita greenhouse gas emissions in the world and is expanding tar sands oil production. Yet Canada imposes sanctions on Iran that limit our capacity to access climate finance. How does Canada justify this position in a committee about protecting the displaced?"</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- SECTION 6: POIs -->
+<section id="poi">
+<div class="container">
+  <div class="section-header">
+    <div class="section-num">06 — Points of Information</div>
+    <div class="section-title">POIs to Raise During Speeches</div>
+    <div class="section-desc">POIs are questions you ask during another delegate's speech. Be sharp, be specific, and make them defend their position.</div>
+  </div>
+
+  <div class="warn-box">
+    <div class="warn-head">⚠ POI Strategy for Iran</div>
+    Always frame POIs to expose the gap between a country's rhetoric and its actions. For Western nations: gap between climate pledges and fossil fuel expansion / sanctions. For developing nations: probe their support for specific binding mechanisms rather than vague commitments. Keep POIs under 15 seconds — one punchy question.
+  </div>
+
+  <div style="font-size:13px; color:var(--text-muted); margin-bottom:1rem; text-transform: uppercase; letter-spacing: 0.07em; font-weight:600;">POIs to Target — Western Bloc</div>
+  <div class="poi-box">
+    <div class="poi-target">Against USA (Aadit Nayak)</div>
+    <div class="poi-q">"Point of Information: The delegate spoke of accountability. Would the United States agree to have its own historical emissions — the largest cumulative total in history — formally quantified as the basis for its financial obligation to climate-displaced persons under this framework?"</div>
+  </div>
+  <div class="poi-box">
+    <div class="poi-target">Against USA (Aadit Nayak)</div>
+    <div class="poi-q">"Point of Information: Does the United States recognize that its unilateral sanctions on Iran prevent our nation from importing solar panels, wind turbines, and green technology — directly impeding our capacity to reduce our own emissions and protect our climate-displaced populations?"</div>
+  </div>
+  <div class="poi-box">
+    <div class="poi-target">Against UK (Heer Gautam)</div>
+    <div class="poi-q">"Point of Information: The delegate mentions protection of displaced persons. Does the United Kingdom support the extension of non-refoulement protections to climate-displaced persons at its own borders — and if not, is its support for this framework merely theoretical?"</div>
+  </div>
+  <div class="poi-box">
+    <div class="poi-target">Against France (Nevaan Jain)</div>
+    <div class="poi-q">"Point of Information: France recently approved new deepwater oil exploration licenses. Does the delegate consider this consistent with France's stated support for protecting populations displaced by the very climate change that fossil fuel use accelerates?"</div>
+  </div>
+  <div class="poi-box">
+    <div class="poi-target">Against Australia (Manav Philip)</div>
+    <div class="poi-q">"Point of Information: Australia exports more coal than almost any other nation on Earth — coal burned by other nations that then contributes to the sea-level rise threatening Pacific island nations. Does Australia support a binding export accountability mechanism?"</div>
+  </div>
+  <div class="poi-box">
+    <div class="poi-target">Against Norway (Dhruvi Shah)</div>
+    <div class="poi-q">"Point of Information: Norway's sovereign wealth fund holds approximately $1.7 trillion — built almost entirely on oil revenues. Would Norway commit a defined percentage of this fund — say 5% — to the Loss and Damage Fund as part of its accountability contribution?"</div>
+  </div>
+  <div class="poi-box">
+    <div class="poi-target">Against Germany (Dhaneesha Arora)</div>
+    <div class="poi-q">"Point of Information: Germany reactivated coal power plants as recently as 2022. Does the delegate agree that this regression in emission commitments contributes to the very displacement this committee seeks to address, and would Germany support a coal phase-out timeline embedded in this resolution?"</div>
+  </div>
+
+  <div style="font-size:13px; color:var(--text-muted); margin: 1.5rem 0 0.75rem; text-transform: uppercase; letter-spacing: 0.07em; font-weight:600;">POIs to Probe — Neutral/Developing Nations</div>
+  <div class="poi-box">
+    <div class="poi-target">Against India (Prakhar Sharma)</div>
+    <div class="poi-q">"Point of Information: India is the world's third-largest emitter today. Would India accept that any framework for historical emitter accountability should have a phased inclusion clause for current large emitters — and would India be prepared to contribute to climate displacement funds based on present-day emission levels?"</div>
+  </div>
+  <div class="poi-box">
+    <div class="poi-target">Against China (Vandit Joshi)</div>
+    <div class="poi-q">"Point of Information: China is currently the world's largest annual emitter. Would China support language in this resolution that includes present-day emission levels — not only historical ones — as a basis for accountability contributions?"</div>
+  </div>
+  <div class="poi-box">
+    <div class="poi-target">Against Japan (Akshata Bharti)</div>
+    <div class="poi-q">"Point of Information: Japan continues to finance coal power plants in Southeast Asia through its Official Development Assistance. Does Japan support including export finance for fossil fuel projects as a category of action subject to accountability under this framework?"</div>
+  </div>
+
+  <div style="font-size:13px; color:var(--text-muted); margin: 1.5rem 0 0.75rem; text-transform: uppercase; letter-spacing: 0.07em; font-weight:600;">POIs to Support / Reinforce — Allied Nations</div>
+  <div class="poi-box">
+    <div class="poi-target">Supporting Maldives (Dhairya Barot)</div>
+    <div class="poi-q">"Point of Information: The delegate has presented a compelling case for sea-level displacement. Would the Maldives support including a clause that grants automatic temporary protected status to citizens of nations where over 50% of inhabited land becomes uninhabitable due to sea-level rise?"</div>
+  </div>
+  <div class="poi-box">
+    <div class="poi-target">Supporting Bangladesh (Suhani Malhotra)</div>
+    <div class="poi-q">"Point of Information: Bangladesh's experience demonstrates exactly why existing frameworks fail. Would the delegate support including measurable trigger thresholds — such as displacement of over 100,000 persons by a single climate event — that automatically activate international protection obligations?"</div>
+  </div>
+  <div class="poi-box">
+    <div class="poi-target">Supporting Algeria (HRIDHAAN)</div>
+    <div class="poi-q">"Point of Information: Algeria's data on Saharan desertification expansion mirrors Iran's experience with our own shrinking lakes and expanding arid zones. Would Algeria co-author a working paper specifically quantifying the economic loss per hectare of desertified land and using this as the basis for reparative climate finance?"</div>
+  </div>
+</div>
+</section>
+
+<!-- SECTION 7: GLOBAL CONTEXT -->
+<section id="global">
+<div class="container">
+  <div class="section-header">
+    <div class="section-num">07 — Global Context</div>
+    <div class="section-title">The Bigger Picture You Need to Know</div>
+    <div class="section-desc">Facts, frameworks, and key arguments to drop in debate for maximum impact.</div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Key International Frameworks to Reference</div>
+      <ul class="styled">
+        <li><strong>1951 Refugee Convention + 1967 Protocol:</strong> Defines refugee as fleeing persecution. Does NOT include climate. Iran wants this extended.</li>
+        <li><strong>Paris Agreement (2015):</strong> Acknowledges climate displacement in preamble but gives no binding protections</li>
+        <li><strong>Sendai Framework (2015–2030):</strong> Disaster risk reduction, non-binding, no refugee status</li>
+        <li><strong>Global Compact on Refugees (2018):</strong> Voluntary, includes climate language, no enforcement</li>
+        <li><strong>Global Compact for Safe Migration (2018):</strong> Voluntary, mentions climate migrants</li>
+        <li><strong>Loss and Damage Fund (COP28, 2023):</strong> Exists, severely underfunded, no binding contribution rules</li>
+        <li><strong>Kampala Convention (2009):</strong> Africa-only, binding IDPs protection — model for global framework</li>
+        <li><strong>Nansen Initiative (2015):</strong> Non-binding, addresses cross-border disaster displacement</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">Devastating Statistics for Debate</div>
+      <ul class="styled">
+        <li>World Bank: <em>216 million</em> internal climate migrants by 2050 without action</li>
+        <li>UNHCR: <em>21.5 million</em> people displaced annually by weather hazards</li>
+        <li>The richest <em>1% of humanity</em> emit as much carbon as the poorest <em>50%</em> combined</li>
+        <li>G7 nations responsible for <em>50%</em> of all historical CO₂ emissions since industrialization</li>
+        <li>Iran's Lake Urmia: lost <em>90%</em> of its surface area; 6 million people affected</li>
+        <li>Pakistan: 2022 floods displaced <em>33 million</em> people — climate attribution confirmed</li>
+        <li>Bangladesh: <em>1 meter</em> of sea-level rise would displace 17 million people</li>
+        <li>Africa: responsible for <em>less than 4%</em> of global emissions but faces <em>most severe</em> climate impacts</li>
+        <li>Iran hosts <em>3–4 million</em> Afghan refugees — #1 in the world relative to GDP</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card card-gold" style="margin-top:1rem;">
+    <div class="card-title">Iran's Master Narrative — Weave This Through Everything</div>
+    <p>Iran is a country that <em>is already living the climate displacement crisis</em> — Lake Urmia has nearly vanished, our western provinces are buried in dust, our farmers abandon land that no longer yields. We host <em>millions of the world's refugees</em> while under crippling sanctions that prevent us from accessing the very technologies and funds needed to protect our own people. We are asked to comply with frameworks designed by the nations most responsible for causing this crisis, to be monitored by institutions they dominate, and to implement solutions we can barely afford. <strong>Iran is not the problem. Iran is the proof that the current system has failed.</strong></p>
+  </div>
+
+  <div class="grid-2" style="margin-top:1rem;">
+    <div class="card">
+      <div class="card-title">Arguments to Counter Western Positions</div>
+      <ul class="styled">
+        <li>When USA talks accountability: <em>"Accountability begins at home — the largest historical emitter must lead."</em></li>
+        <li>When EU talks monitoring: <em>"Monitoring mechanisms must not become surveillance tools against sovereign nations."</em></li>
+        <li>When any Western state mentions women's rights: <em>"We welcome this concern — now apply it equally to the women of Palestine, of Yemen, of nations bombed by Western arms."</em></li>
+        <li>When conditionality is implied: <em>"Human rights protection cannot be conditional. That is the very definition of conditionality violating human rights."</em></li>
+        <li>When sanctions aren't mentioned: <em>Bring them up. Every time.</em></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">Resolutions Language Iran Should Push For</div>
+      <ul class="styled">
+        <li><em>"Affirming</em> that states with disproportionate historical responsibility for climate change bear commensurate obligations..."</li>
+        <li><em>"Recognizing</em> that unilateral coercive economic measures impair states' capacities to adapt to climate change and protect climate-displaced populations..."</li>
+        <li><em>"Calling upon</em> all member states to extend non-refoulement protections to persons displaced by climate change and environmental degradation..."</li>
+        <li><em>"Establishing</em> a Special Rapporteur on Climate Displacement with a mandate to investigate state and corporate accountability..."</li>
+        <li><em>"Demanding</em> that the Loss and Damage Fund be made accessible to all nations without political conditionality..."</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:1rem; background: var(--surface2); border-color: var(--border-accent);">
+    <div class="card-title">What "Winning" Looks Like for Iran in This Committee</div>
+    <ul class="styled">
+      <li>A resolution that names <strong>historical emitters as primarily responsible</strong> for climate displacement</li>
+      <li>Language explicitly prohibiting <strong>conditionality on climate aid and protection</strong></li>
+      <li>A call to <strong>expand the 1951 Refugee Convention</strong> to include climate-displaced persons</li>
+      <li>Recognition of <strong>desertification-driven displacement</strong> as a specific human rights concern</li>
+      <li>Anti-sanctions language framed as a climate human rights issue</li>
+      <li>Strong gender-specific protections (Motion 2) that Iran can claim as a humanitarian win</li>
+      <li>No interventionist monitoring mechanisms that could be turned against developing nations</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<footer>
+  UNHRC · Islamic Republic of Iran · Climate Displacement Study Guide · Compiled for Jasnoor Kaur<br>
+  <span style="opacity:0.4;">For academic MUN use only</span>
+</footer>
+
+<script>
+function showMotion(n) {
+  document.querySelectorAll('.motion-tab').forEach((t,i) => {
+    t.classList.toggle('active', i===n-1);
+  });
+  document.querySelectorAll('.motion-content').forEach((c,i) => {
+    c.classList.toggle('active', i===n-1);
+  });
+}
+</script>
+</body>
+</html>
